@@ -10,7 +10,7 @@ public class RecipeController : Controller
         return View(recipes);
     }
 
-    public ActionResult FindById(Guid recipeId)
+    public ActionResult Details(Guid id)
     {
         throw new NotImplementedException();
     }
@@ -20,7 +20,7 @@ public class RecipeController : Controller
         throw new NotImplementedException();
     }
 
-    public ActionResult Update(Guid recipeId)
+    public ActionResult Update(Guid id)
     {
         throw new NotImplementedException();
     }

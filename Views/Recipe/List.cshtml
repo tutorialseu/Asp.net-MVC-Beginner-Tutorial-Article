@@ -3,7 +3,7 @@
 <table>
     <tr>
         <th style="width:300px">Recipe Name</th>
-        <th>Ingredients</th>
+        <th style="width:600px">Ingredients</th>
     </tr>
 
     @foreach (var recipe in Model)
@@ -11,6 +11,9 @@
         <tr>
             <td>@recipe.Name</td>
             <td>@recipe.Ingredients</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@recipe.ID">Details</a> 
+            </td>
         </tr>
     }
 </table>
