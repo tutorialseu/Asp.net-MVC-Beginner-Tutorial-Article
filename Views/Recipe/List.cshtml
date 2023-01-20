@@ -1,0 +1,16 @@
+@model IEnumerable<Recipe>
+
+<table>
+    <tr>
+        <th style="width:300px">Recipe Name</th>
+        <th>Ingredients</th>
+    </tr>
+
+    @foreach (var recipe in Model)
+    {
+        <tr>
+            <td>@recipe.Name</td>
+            <td>@recipe.Ingredients</td>
+        </tr>
+    }
+</table>
