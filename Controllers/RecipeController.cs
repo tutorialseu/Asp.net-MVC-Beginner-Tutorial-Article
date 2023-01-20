@@ -6,14 +6,15 @@ public class RecipeController : Controller
 {
     public ActionResult List()
     {
-        throw new NotImplementedException();
+        var recipes = new Recipes().List();
+        return View(recipes);
     }
-    
+
     public ActionResult FindById(Guid recipeId)
     {
         throw new NotImplementedException();
     }
-    
+
     public ActionResult Add()
     {
         throw new NotImplementedException();
