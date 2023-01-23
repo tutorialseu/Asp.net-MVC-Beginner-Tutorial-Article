@@ -4,15 +4,22 @@ namespace CrudInMvc.Models;
 
 public class RecipeController : Controller
 {
+    private readonly Recipes recipes;
+
+    public RecipeController(Recipes recipes)
+    {
+        this.recipes = recipes;
+    }
+
     public ActionResult List()
     {
-        var recipes = new Recipes().List();
-        return View(recipes);
+        var recipesList = recipes.List();
+        return View(recipesList);
     }
 
     public ActionResult Details(Guid id)
     {
-        var recipe = new Recipes().FindById(id);
+        var recipe = recipes.FindById(id);
         return View(recipe);
     }
 
@@ -23,7 +30,7 @@ public class RecipeController : Controller
 
     public ActionResult Edit(Guid id)
     {
-        var recipe = new Recipes().FindById(id);
+        var recipe = recipes.FindById(id);
         return View(recipe);
     }
 
