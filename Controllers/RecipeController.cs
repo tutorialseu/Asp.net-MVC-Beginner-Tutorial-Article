@@ -23,7 +23,8 @@ public class RecipeController : Controller
 
     public ActionResult Edit(Guid id)
     {
-        throw new NotImplementedException();
+        var recipe = new Recipes().FindById(id);
+        return View(recipe);
     }
 
     public ActionResult Remove(Guid recipeId)
