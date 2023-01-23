@@ -21,7 +21,7 @@ public class RecipeController : Controller
         throw new NotImplementedException();
     }
 
-    public ActionResult Update(Guid id)
+    public ActionResult Edit(Guid id)
     {
         throw new NotImplementedException();
     }
