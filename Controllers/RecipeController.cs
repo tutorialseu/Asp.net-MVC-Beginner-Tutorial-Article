@@ -57,7 +57,7 @@ public class RecipeController : Controller
         return View(editedRecipe);
     }
 
-    public ActionResult Remove(Guid recipeId)
+    public ActionResult Delete(Guid recipeId)
     {
         throw new NotImplementedException();
     }
