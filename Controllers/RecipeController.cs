@@ -29,6 +29,17 @@ public class RecipeController : Controller
         return View(newRecipe);
     }
 
+    [HttpPost]
+    public IActionResult Add(Recipe newRecipe)
+    {
+        if (ModelState.IsValid)
+        {
+            recipes.Add(newRecipe);
+            return RedirectToAction(nameof(List));
+        }
+        return View(newRecipe);
+    }
+
     public ActionResult Edit(Guid id)
     {
         var recipe = recipes.FindById(id);
