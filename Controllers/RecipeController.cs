@@ -59,6 +59,7 @@ public class RecipeController : Controller
 
     public ActionResult Delete(Guid recipeId)
     {
-        throw new NotImplementedException();
+        recipes.Remove(recipeId);
+        return RedirectToAction(nameof(List));
     }
 }
