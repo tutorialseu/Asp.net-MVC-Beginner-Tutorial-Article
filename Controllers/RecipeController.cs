@@ -37,7 +37,8 @@ public class RecipeController : Controller
     [HttpPost]
     public IActionResult Edit(Recipe editedRecipe)
     {
-        throw new NotImplementedException();
+        recipes.Update(editedRecipe);
+        return RedirectToAction(nameof(List));
     }
 
     public ActionResult Remove(Guid recipeId)
