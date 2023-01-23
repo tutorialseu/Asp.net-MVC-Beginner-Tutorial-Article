@@ -27,6 +27,12 @@ public class RecipeController : Controller
         return View(recipe);
     }
 
+    [HttpPost]
+    public IActionResult Edit(Recipe editedRecipe)
+    {
+        throw new NotImplementedException();
+    }
+
     public ActionResult Remove(Guid recipeId)
     {
         throw new NotImplementedException();
