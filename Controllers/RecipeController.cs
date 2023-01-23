@@ -37,8 +37,12 @@ public class RecipeController : Controller
     [HttpPost]
     public IActionResult Edit(Recipe editedRecipe)
     {
-        recipes.Update(editedRecipe);
-        return RedirectToAction(nameof(List));
+        if (ModelState.IsValid)
+        {
+            recipes.Update(editedRecipe);
+            return RedirectToAction(nameof(List));
+        }
+        return View(editedRecipe);
     }
 
     public ActionResult Remove(Guid recipeId)
