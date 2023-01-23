@@ -12,7 +12,8 @@ public class RecipeController : Controller
 
     public ActionResult Details(Guid id)
     {
-        throw new NotImplementedException();
+        var recipe = new Recipes().FindById(id);
+        return View(recipe);
     }
 
     public ActionResult Add()
