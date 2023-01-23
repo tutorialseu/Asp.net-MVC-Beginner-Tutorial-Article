@@ -1,0 +1,23 @@
+@model Recipe
+
+<h2>Add Recipe</h2>
+
+<form method="post" asp-controller="Recipe" asp-action="Add">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Ingredients"></label>
+        <textarea asp-for="Ingredients" class="form-control"></textarea>
+        <span asp-validation-for="Ingredients"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Instructions"></label>
+        <textarea asp-for="Instructions" class="form-control"></textarea>
+        <span asp-validation-for="Instructions"></span>
+    </div>
+    <input type="submit" value="Add Recipe" class="btn btn-primary" />
+    <a asp-action="List">Cancel</a>
+</form>
